@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/**GRADIENTES**/
+.colorDeFondo {
+    background-image: linear-gradient(to bottom, #afeeeea4,pink)
+}
+
+html {
+    font-size: 62,5%
+}
+
+
+.etiquetaAlbum {
+    height: 180px;
+    width: 760px;
+}
+
+h1 {
+color: palevioletred;
+font-style: italic;
+font-size: 60px;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+letter-spacing: 1px;
+padding: 50px;
+margin-bottom: 100px;
+}
+
+.estiloFlex {
+    display: flex;
+    justify-content: center;
+}
+.estiloTituloLogo {
+    height: 280px;
+    width: 350px;
+    justify-content: center;
+}
+
+/** BOX MODEL**/
+/* li {
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    color: rebeccapurple;
+    text-align: center;
+    } */
+
+section {
+    margin: 30px;
+}
+
+.botonMusica {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+    /* flexBox desafio */
+.navBarra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.logoLover {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: 1;
+    height: 180px;
+    width: 190px;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+.logoFolklore {
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    z-index: 1;
+    height: 180px;
+    width: 240px;
+}
+.logoEvermore {
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    z-index: 1;
+    height: 180px;
+    width: 210px;
+    margin-left: 20px;
+}
+
+/** TRANSFORMACIONES **/
+.logoTransition {
+    transition: height;
+}
+.logoLover:hover {
+    transform:translate(30px);
+}
+
+.logoFolklore:hover {
+    transform:translate(30px);
+}
+
+.logoEvermore:hover {
+    transform:translate(30px);
+}
+
+.albumEstilo {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    justify-content:space-evenly;
+}
+
+/*DESAFIO GRIDS*/
+.grid {
+    display: grid;
+    grid-template-areas:
+                        "header header header"
+                        "nav nav nav"
+                        "img1 img2 img3"
+                        "img4 img5 img6"
+                        "img7 img8 img9";
+}
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.img5 {
+    grid-area: img5;
+}
+.img6 {
+    grid-area: img6;
+}
+.img7 {
+    grid-area: img7;
+}
+.img8 {
+    grid-area: img8;
+}
+.img9 {
+    grid-area: img9;
+}
+
+/* MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction:row;
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8"
+        "img9 ";
+        grid-template-columns: repeat (2,1fr);
+    }
+        .albumEstilo {
+            width: 150px;
+            height: 150px;
+            margin: 1px;
+        }
+        .navBarra {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+        h1 {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            color: palevioletred;
+            font-style: italic;
+            font-size: 50px;
+            text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8"
+        "img9 ";
+        grid-template-columns: repeat (2, 1fr);
+    }
+        .albumEstilo {
+            width: 150px;
+            height: 150px;
+            margin: 1px;
+        }
+        .navBarra {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+        h1 {
+            color: palevioletred;
+            font-style: italic;
+            font-size: 50px;
+            text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        display: flex;
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6"
+        "img7"
+        "img8"
+        "img9";
+        grid-template-columns: repeat (1, 1fr);
+        }
+        .albumEstilo {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        .navBarra {
+            align-items:center;
+            font-size: 10px;
+        }
+        h1 {
+            color: palevioletred;
+            font-style: italic;
+            font-size: 40px;
+            text-align: center;
+    }

@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+/* Variables */
+$color-white: #f5f5f5;
+$color-title: gold;
+
+#backgroundColor {
+    background-color: black;
+}
+
+/*BEM*/
+
+.body__contenedorGift {
+    display: flex;
+    justify-content: left;
+}
+.estiloGift {
+    height: 50%;
+    width: 50%;
+    margin-left: 60px;
+}
+
+.div__contenedorTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.article__parrafo {
+    float: right;
+    justify-content: right;
+    margin-right: 100px;
+}
+.section__estiloLista {
+    list-style: none;
+    text-decoration: none;
+    color: #f5f5f5;
+    margin-left: 60px;
+}
+
+.article__colorText {
+    color: $color-white;
+    text-align: justify;
+}
+.section__estiloTitle {
+    color: $color-title;
+}
+.article__estiloTitle {
+    color: $color-title;
+}
+
+.footer__quoteEstilo {
+    display: flex;
+    justify-content: center;
+}
+.estiloFooter {
+    height: 600px;
+    width: 800px;
+    margin-left: 550px;
+}
+.border__album {
+    border-style: solid;
+    color: gold;
+}
+.estilo__album {
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-right: 200px;
+    justify-content:right;
+    float: right;
+}
